@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dienynas>
+	<mokinys>
+		<vardas>
+			Petras Grazulis
+		</vardas>
+		<dalykas>
+			<pavadinimas>Mathematics</pavadinimas>
+			<pazimys>2</pazimys>
+			<pazimys>1</pazimys>
+			<pazimys>3</pazimys>
+		</dalykas>
+		<dalykas>
+			<pavadinimas>Geography</pavadinimas>
+			<pazimys>7</pazimys>
+			<pazimys>9</pazimys>
+			
+		</dalykas>
+		<dalykas>
+			<pavadinimas>Physics Sciences</pavadinimas>
+			<pazimys>8</pazimys>
+			<pazimys>5</pazimys>
+			<pazimys>10</pazimys>
+		</dalykas>
+	</mokinys>
+	<mokinys>
+		<vardas>
+			Pavardis Vardis
+		</vardas>
+		<dalykas>
+			<pavadinimas>Arts</pavadinimas>
+			<pazimys>8</pazimys>
+			<pazimys>2</pazimys>
+			<pazimys>4</pazimys>
+			<pazimys>10</pazimys>
+		</dalykas>
+		<dalykas>
+			<pavadinimas>Biology</pavadinimas>
+			<pazimys>9</pazimys>
+			<pazimys>9</pazimys>
+			<pazimys>7</pazimys>
+		</dalykas>
+		
+	</mokinys>
+	<mokinys>
+		<vardas>Vytautas Didysis</vardas>
+		<dalykas>
+			<pavadinimas>Informatika</pavadinimas>
+			<pazimys>8</pazimys>
+			<pazimys>4</pazimys>
+			<pazimys>6</pazimys>
+			<pazimys>10</pazimys>
+		</dalykas>
+		<dalykas>
+			<pavadinimas>Chemistry</pavadinimas>
+			<pazimys>9</pazimys>
+			<pazimys>9</pazimys>
+			<pazimys>7</pazimys>
+		</dalykas>
+		<dalykas>
+			<pavadinimas>Biology</pavadinimas>
+			<pazimys>8</pazimys>
+			<pazimys>8</pazimys>
+			<pazimys>10</pazimys>
+		</dalykas>
+	</mokinys>
+</dienynas>
+
+

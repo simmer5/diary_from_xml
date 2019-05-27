@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Diary</title>
+</head>
+<body>
+<h1>Diary</h1>
+<table id="demo" class = "w3-table  w3-hoverable"></table>
+<div id="test"></div>
+
+<script>
+	window.onload = function () {
+		var xhttp = new XMLHttpRequest();
+	  	xhttp.onreadystatechange = function() {
+	  		if (this.readyState == 4 && this.status == 200) {
+	  			myFunction(this);
+	  		}
+  		};
+  		xhttp.open("GET", "dienynas.xml", true);
+  		xhttp.send();
+	}
+	function myFunction(xml) {
+  		var i;
+  		var xmlDoc = xml.responseXML;
+  		var table="<thead class='w3-red'><th></th><th>Grades</th><th>Average</th></thead>";
+  		var v = xmlDoc.getElementsByTagName("vardas");
+  		var m = xmlDoc.getElementsByTagName("mokinys");
+  		var sum = 0;
+
+
+  		for (i = 0; i <v.length; i++) { 
+    		table += "<tr><th colspan ='3'>" + m[i].getElementsByTagName("vardas")[0].childNodes[0].nodeValue+"</th></tr>";
+    		
+    		for(var j = 0; j<m[i].getElementsByTagName("dalykas").length; j++){
+    			
+    				table += "<tr><td>"+ m[i].getElementsByTagName("dalykas")[j].getElementsByTagName("pavadinimas")[0].childNodes[0].nodeValue +"</td><td>";
+    			    			
+    			for (var k=0; k<m[i].getElementsByTagName("dalykas")[j].getElementsByTagName("pazimys").length; k++){
+    				
+    				table+=" "+ m[i].getElementsByTagName("dalykas")[j].getElementsByTagName("pazimys")[k].childNodes[0].nodeValue+", ";
+    				
+    				sum +=  parseInt(m[i].getElementsByTagName("dalykas")[j].getElementsByTagName("pazimys")[k].childNodes[0].nodeValue);
+    				
+    			}
+
+    			table+="</td><td>"+parseInt(sum/m[i].getElementsByTagName("dalykas")[j].getElementsByTagName("pazimys").length);
+    			sum = 0;
+    			table+="</td>";
+
+    		}
+
+    	}
+
+    	document.getElementById("demo").innerHTML = table;
+    	//document.getElementById("test").innerHTML = m[1].getElementsByTagName("dalykas")[2].getElementsByTagName("pazimys")[2].childNodes[0].nodeValue;//pazymius ima
+    	//document.getElementById("test").innerHTML = m[1].getElementsByTagName("dalykas")[0].getElementsByTagName("pavadinimas")[0].childNodes[0].nodeValue;//ima dalykus
+    	    	
+	}
+
+</script>
+
+</body>
+
+</html>
